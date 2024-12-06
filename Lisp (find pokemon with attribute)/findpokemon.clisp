@@ -1,0 +1,156 @@
+;;liste de liste
+;; Chaque Pokemon est une liste avec nom et ses attributs
+;; Exemple (nom (attribut1 valeur1) (attribut2 valeur2) ...)
+
+(setq *liste_pokemon*
+  '((bulbizarre (type plante) (color vert) (size petit) (habitat foret))
+    (herbizarre (type plante) (color vert) (size moyen) (habitat foret))
+    (florizarre (type plante) (color vert) (size grand) (habitat foret))
+    (salameche (type feu) (color rouge) (size petit) (habitat montagne))
+    (reptincel (type feu) (color rouge) (size moyen) (habitat montagne))
+    (dracaufeu (type feu) (color rouge) (size grand) (habitat montagne))
+    (carapuce (type eau) (color bleu) (size petit) (habitat mer))
+    (carabaffe (type eau) (color bleu) (size moyen) (habitat mer))
+    (tortank (type eau) (color bleu) (size grand) (habitat mer))
+    (chenipan (type insecte) (color vert) (size petit) (habitat foret))
+    (chrysacier (type insecte) (color vert) (size moyen) (habitat foret))
+    (papilusion (type insecte) (color blanc) (size moyen) (habitat foret))
+    (roucool (type vol) (color brun) (size petit) (habitat plaine))
+    (roucoups (type vol) (color brun) (size moyen) (habitat plaine))
+    (roucarnage (type vol) (color brun) (size grand) (habitat plaine))
+    (rattata (type normal) (color violet) (size petit) (habitat plaine))
+    (rattatac (type normal) (color violet) (size moyen) (habitat plaine))
+    (piafabec (type vol) (color marron) (size petit) (habitat foret))
+    (rapasdepic (type vol) (color marron) (size moyen) (habitat foret))
+    (abo (type poison) (color violet) (size petit) (habitat foret))
+    (arbok (type poison) (color violet) (size grand) (habitat foret))
+    (pikachu (type electrique) (color jaune) (size petit) (habitat foret))
+    (raichu (type electrique) (color jaune) (size grand) (habitat foret))
+    (sabelette (type sol) (color marron) (size petit) (habitat desert))
+    (sablaireau (type sol) (color marron) (size grand) (habitat desert))
+    (nidoran(f) (type poison) (color bleu) (size petit) (habitat foret))
+    (nidorina (type poison) (color bleu) (size moyen) (habitat foret))
+    (nidoqueen (type poison) (color bleu) (size grand) (habitat foret))
+    (nidoran(m) (type poison) (color violet) (size petit) (habitat foret))
+    (nidorino (type poison) (color violet) (size moyen) (habitat foret))
+    (nidoking (type poison) (color violet) (size grand) (habitat foret))
+    (melofee (type fee) (color rose) (size petit) (habitat plaine))
+    (melodelfe (type fee) (color rose) (size moyen) (habitat plaine))
+    (goupix (type feu) (color marron) (size petit) (habitat montagne))
+    (feunard (type feu) (color marron) (size moyen) (habitat montagne))
+    (rondoudou (type normal) (color rose) (size petit) (habitat plaine))
+    (grodoudou (type normal) (color rose) (size moyen) (habitat plaine))
+    (nosferapti (type poison) (color violet) (size petit) (habitat grotte))
+    (nosferalto (type poison) (color violet) (size moyen) (habitat grotte))
+    (mystherbe (type plante) (color bleu) (size petit) (habitat foret))
+    (ortide (type plante) (color bleu) (size moyen) (habitat foret))
+    (rafflesia (type plante) (color bleu) (size grand) (habitat foret))
+    (paras (type insecte) (color rouge) (size petit) (habitat foret))
+    (parasect (type insecte) (color rouge) (size moyen) (habitat foret))
+    (mimitoss (type insecte) (color bleu) (size petit) (habitat foret))
+    (aeromite (type insecte) (color bleu) (size moyen) (habitat foret))
+    (taupiqueur (type sol) (color marron) (size petit) (habitat montagne))
+    (triopikeur (type sol) (color marron) (size moyen) (habitat montagne))
+    (miaouss (type normal) (color marron) (size petit) (habitat plaine))
+    (persian (type normal) (color marron) (size moyen) (habitat plaine))
+    (psykokwak (type eau) (color bleu) (size petit) (habitat lac))
+    (akwakwak (type eau) (color bleu) (size moyen) (habitat lac))
+    (ferosinge (type normal) (color marron) (size petit) (habitat foret))
+    (colossinge (type normal) (color marron) (size moyen) (habitat foret))
+    (caninos (type feu) (color marron) (size moyen) (habitat montagne))
+    (arcanin (type feu) (color marron) (size grand) (habitat montagne))
+    (ponyta (type feu) (color marron) (size moyen) (habitat plaine))
+    (galopa (type feu) (color marron) (size grand) (habitat plaine))
+    (ramoloss (type eau) (color rose) (size petit) (habitat eau))
+    (flagadoss (type eau) (color rose) (size moyen) (habitat eau))
+    (magneti (type electrique) (color gris) (size petit) (habitat grotte))
+    (magneton (type electrique) (color gris) (size moyen) (habitat grotte))
+    (canarticho (type vol) (color marron) (size petit) (habitat plaine))
+    (doduo (type normal) (color marron) (size petit) (habitat plaine))
+    (dodrio (type normal) (color marron) (size moyen) (habitat plaine))
+    (otaria (type eau) (color bleu) (size petit) (habitat glace))
+    (lamantine (type eau) (color bleu) (size moyen) (habitat glace))
+    (tadmorv (type poison) (color violet) (size petit) (habitat decharge))
+    (grotadmorv (type poison) (color violet) (size moyen) (habitat decharge))
+    (kokiyas (type eau) (color marron) (size petit) (habitat eau))
+    (crustabri (type eau) (color marron) (size moyen) (habitat eau))
+    (fantominus (type spectre) (color violet) (size petit) (habitat tour))
+    (spectrum (type spectre) (color violet) (size moyen) (habitat tour))
+    (ectoplasma (type spectre) (color violet) (size grand) (habitat tour))
+    (onix (type sol) (color gris) (size grand) (habitat grotte))
+    (soporifik (type psy) (color rose) (size petit) (habitat foret))
+    (hypnomade (type psy) (color rose) (size moyen) (habitat foret))
+    (krabby (type eau) (color rouge) (size petit) (habitat mer))
+    (krabboss (type eau) (color rouge) (size moyen) (habitat mer))
+    (voltorbe (type electrique) (color rouge) (size petit) (habitat decharge))
+    (electrode (type electrique) (color rouge) (size moyen) (habitat decharge))
+    (nosferalto (type poison) (color violet) (size petit) (habitat grotte))
+    (nidosan (type poison) (color bleu) (size grand) (habitat foret))
+    (mimiqui (type fee) (color rose) (size petit) (habitat foret))
+    (alakazam (type psy) (color marron) (size grand) (habitat foret))
+    (tauros (type normal) (color marron) (size grand) (habitat plaine))
+    (magicarpe (type eau) (color rouge) (size petit) (habitat lac))
+    (leveinard (type normal) (color rose) (size moyen) (habitat plaine))
+    (lokhlass (type eau) (color bleu) (size grand) (habitat eau))
+    (metamorph (type normal) (color violet) (size petit) (habitat plaine))
+    (evoli (type normal) (color marron) (size petit) (habitat foret))
+    (pyroli (type feu) (color rouge) (size moyen) (habitat montagne))
+    (aquana (type eau) (color bleu) (size moyen) (habitat mer))
+    (mentali (type psy) (color rose) (size moyen) (habitat foret))
+    (noctali (type tenebre) (color noir) (size moyen) (habitat foret))
+    (porygon (type normal) (color rose) (size petit) (habitat plaine))
+    (aerodactyl (type roche) (color violet) (size grand) (habitat montagne))
+    (mewtwo (type psy) (color violet) (size grand) (habitat grotte))
+    (mew (type psy) (color rose) (size petit) (habitat foret))))
+
+;; Fonction pour trouver les Pokemon correspondant a un ensemble de regles
+(defun find-pokemon (rules)
+  (if (null (setq matching-pokemon (filter-pokemon *liste_pokemon* rules)))
+      (format t "Aucun Pokemon ne correspond a vos criteres.~%")
+      (format t "Pokemon correspondant trouve : ~a~%" (mapcar #'car matching-pokemon))))
+
+;; Fonction pour filtrer les Pokemon correspondant a l'ensemble de regles
+(defun filter-pokemon (pokemon-list rules)
+  (remove-if-not (lambda (pokemon) (satisfies-rules-p pokemon rules)) pokemon-list))
+
+;; Verifie si un Pokemon satisfait l'ensemble de regles
+(defun satisfies-rules-p (pokemon rules)
+  (every (lambda (rule) (satisfies-rule-p pokemon rule)) rules))
+
+;; Verifie si un Pokemon satisfait une regle specifique
+(defun satisfies-rule-p (pokemon rule)
+  (cond
+    ;; Si la regle est une liste utilise case pour gerer des cas
+    ((listp rule)
+     (case (car rule)
+       ;; Si AND, verifie que toutes les sous-regles sont satisfaites
+       (AND (every #'(lambda (subrule) (satisfies-rule-p pokemon subrule)) (cdr rule)))
+       ;; Si OR, verifie qu'au moins une est satisfaite
+       (OR (some #'(lambda (subrule) (satisfies-rule-p pokemon subrule)) (cdr rule)))
+       ;; Si condition simple, verifie la condition
+       (t (equal (get-attribute pokemon (car rule)) (cadr rule)))))
+    (t (equal (get-attribute pokemon rule) t))))
+
+
+;; Fonction pour recuperer la valeur d'un attribut specifique d'un Pokemon
+(defun get-attribute (pokemon attribute)
+  (cadr (assoc attribute (rest pokemon))))
+
+
+;; Utilisation :
+
+(find-pokemon '((type feu) (color rouge) (size petit)))
+
+(find-pokemon '((type plante) (size moyen)))
+
+(find-pokemon '((color bleu)))
+
+(find-pokemon '((size moyen) (habitat foret)))
+
+(find-pokemon '((type feu) (color rouge) (OR (size petit) (size moyen))))
+
+(find-pokemon '((type eau) (OR (habitat lac) (habitat mer))))
+
+(find-pokemon '((AND (color bleu) (habitat lac))))
+
+(find-pokemon '((OR (type fee) (habitat lac) (type psy))))
